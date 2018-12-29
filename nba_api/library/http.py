@@ -76,7 +76,7 @@ class NBAHTTP:
                 "http": proxy,
                 "https": proxy,
             }
-
+        print(proxy)
         contents = None
         url = None
 
