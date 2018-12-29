@@ -1,5 +1,9 @@
 import os
+from lxml.html import fromstring
 import random
+import requests
+from itertools import cycle
+import traceback
 DEBUG = False
 
 # Saving and loading responses from text files so that you do not have to do multiple requests when debugging.
