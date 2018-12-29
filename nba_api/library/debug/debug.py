@@ -2,6 +2,7 @@ import os
 from bs4 import BeautifulSoup
 import html5lib
 import random
+import re
 import requests
 DEBUG = False
 
