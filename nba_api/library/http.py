@@ -1,5 +1,6 @@
 import os
 import json
+import random
 import requests
 
 
@@ -70,13 +71,17 @@ class NBAHTTP:
         headers = self.headers
         if referer:
             headers['Referer'] = referer
-        proxies = None
+
+        proxies = PROXY
+        currProxy = None
         if proxy:
+            currProxy = random.sample(proxy, 1)[0]
             proxies = {
-                "http": proxy,
-                "https": proxy,
+                "http": currProxy,
+                "https": currProxy,
             }
-        print(proxy)
+        print(proxy, currProxy)
+
         contents = None
         url = None
 

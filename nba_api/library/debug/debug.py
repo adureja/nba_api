@@ -14,14 +14,14 @@ def get_proxies():
     response = requests.get(url)
     parser = fromstring(response.text)
     proxies = set()
-    for i in parser.xpath('//tbody/tr')[8:19]:
+    for i in parser.xpath('//tbody/tr')[:19]:
         if i.xpath('.//td[7][contains(text(),"yes")]'):
             proxy = ":".join([i.xpath('.//td[1]/text()')[0], i.xpath('.//td[2]/text()')[0]])
             proxies.add(proxy)
     return proxies
 
-proxies = get_proxies()
 
-PROXY = random.sample(proxies, 1)
+
+PROXY = get_proxies()
 
 # STATS_HEADERS = {}
