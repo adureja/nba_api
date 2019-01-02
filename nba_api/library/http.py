@@ -80,7 +80,7 @@ class NBAHTTP:
                 "http": currProxy,
                 "https": currProxy,
             }
-        print(proxy, currProxy)
+        #print(proxy, currProxy)
 
         contents = None
         url = None

@@ -28,6 +28,6 @@ def get_proxies():
 
 
 
-PROXY = get_proxies()
-
+# PROXY = get_proxies()
+PROXY = False
 # STATS_HEADERS = {}
